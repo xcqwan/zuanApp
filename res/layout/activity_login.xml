@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF" >
+
+    <!-- 表格布局 -->
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/login_form_border" >
+
+        <!-- 表格布局：第一行 -->
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dip"
+                android:text="@string/tao_nick"
+                android:textColor="@color/select_bule" >
+            </TextView>
+
+            <AutoCompleteTextView
+                android:id="@+id/user_nick_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:hint="@string/acount_tis"
+                android:singleLine="true" />
+        </TableRow>
+        <View
+            android:id="@+id/spider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/spider" />
+        <!-- 表格布局：第二行 -->
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dip"
+                android:text="@string/password"
+                android:textColor="@color/select_bule" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/psd_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:hint="@string/psd_tis"
+                android:inputType="textPassword"
+                android:singleLine="true" >
+            </EditText>
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/appic" />
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/imglogin_btn" />
+    
+    <TextView
+        android:id="@+id/qrcode_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_btn"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="@string/scan_title"
+        android:textColor="@color/select_bule" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:padding="10dp" >
+
+        <View
+            android:id="@+id/spider_line"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/findpsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/spider_line"
+            android:text="@string/findpas"
+            android:textColor="@color/select_bule" />
+
+        <TextView
+            android:id="@+id/newuser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/spider_line"
+            android:text="@string/newuser"
+            android:textColor="@color/select_bule" />
+    </RelativeLayout>
+
+</RelativeLayout>
